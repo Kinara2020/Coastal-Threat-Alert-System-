@@ -241,7 +241,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>🌊 Coastal Threat Alert System</h1>
+            <h1>Coastal Threat Alert System</h1>
             <p>Real-time monitoring and early warning system for coastal inundation risks</p>
         </div>
 
@@ -325,21 +325,20 @@
 
         <div class="footer">
             <p>Coastal Threat Alert System v1.0 | Real-time monitoring powered by AI and satellite data</p>
-            <p>⚠️ In case of emergency, follow local evacuation procedures</p>
+            <p> In case of emergency, follow local evacuation procedures</p>
         </div>
     </div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
-        // Initialize map
+       
         const map = L.map('map').setView([37.7749, -122.4194], 10); // Default to San Francisco
 
-        // Add base layer
+    
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
 
-        // Add coastal risk zones
         const riskZones = [
             {
                 coords: [[37.8, -122.5], [37.8, -122.3], [37.7, -122.3], [37.7, -122.5]],
@@ -382,7 +381,7 @@
                 .openPopup();
         });
 
-        // Simulate real-time data updates
+        
         function updateMetrics() {
             const waveHeight = (Math.random() * 3 + 1).toFixed(1);
             const waterLevel = (Math.random() * 2 + 1).toFixed(1);
@@ -392,7 +391,7 @@
             document.querySelector('.metric-card:nth-child(2) .metric-value').textContent = waterLevel + 'm';
             document.querySelector('.metric-card:nth-child(3) .metric-value').textContent = windSpeed + 'km/h';
 
-            // Update risk level based on conditions
+           
             let riskLevel = 'Low';
             let riskColor = '#28a745';
             
@@ -408,7 +407,7 @@
             riskElement.textContent = riskLevel;
             riskElement.style.color = riskColor;
 
-            // Update alert status
+          
             const alertElement = document.getElementById('currentAlert');
             if (riskLevel === 'High') {
                 alertElement.innerHTML = '<span>🔴 HIGH ALERT: Coastal inundation risk detected!</span>';
@@ -422,13 +421,13 @@
             }
         }
 
-        // Initial update
+       
         updateMetrics();
         
-        // Update every 30 seconds
+       
         setInterval(updateMetrics, 30000);
 
-        // Add new notifications periodically
+        
         setInterval(() => {
             const notifications = [
                 'Weather pattern change detected',
@@ -457,3 +456,4 @@
     </script>
 </body>
 </html>
+
