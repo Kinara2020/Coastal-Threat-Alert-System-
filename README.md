@@ -1,13 +1,4 @@
-# HACKOUT2025PHANTOMS
-Hackathon Ideation Round: Coastal Threat Alert System
-
-Team name: Phantoms
-Participants name:  
-• Raj Thummar  
-• Kinara Patel  
-• Dakshvi Vekariya  
-• Akshit Prajapat  
-
+Coastal Threat Alert System 
  
 Description
 
